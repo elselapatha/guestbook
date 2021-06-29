@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>Guestbook</span>
+  <span class="header-spacer"></span>
+  <button *ngIf="!(authService.isLogged|async)" [routerLink]="['/login']" routerLinkActive="router-link-active"
+    mat-button aria-label="Example icon-button with menu icon">
+    Login
+  </button>
+  <button *ngIf="!(authService.isLogged|async)" [routerLink]="['/signup']" routerLinkActive="active" mat-button
+    class="example-icon" aria-label="Example icon-button with menu icon">
+    Sign Up
+  </button>
+  <button *ngIf="authService.isLogged|async" (click)="onLogout()" mat-button class="example-icon"
+    aria-label="Example icon-button with menu icon">
+    Log out
+  </button>
+</mat-toolbar>

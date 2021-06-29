@@ -1,0 +1,24 @@
+<div class="login">
+  <div class="container">
+    <mat-card>
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+          <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input formControlName="username" required matInput placeholder="Username">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input formControlName="password" type="password" required matInput placeholder="Password">
+          </mat-form-field>
+          <div class="actions">
+            <a [routerLink]="['/reset']" routerLinkActive="active">Forget Password</a>
+            <button type="submit" mat-flat-button color="primary">Login</button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+
+  </div>
+</div>

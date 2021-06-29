@@ -1,0 +1,6 @@
+<div *ngIf="authService.isLogged|async">
+  <app-publisher></app-publisher>
+  <app-records></app-records>
+</div>
+
+<app-welcome *ngIf="!(authService.isLogged|async)"></app-welcome>

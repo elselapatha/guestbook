@@ -1,0 +1,22 @@
+.publisher-wrap
+  padding: 24px
+.row
+  display: inline-flex
+  width: 100%
+  flex-direction: row
+  & .col
+    flex-grow: 1
+    padding-right: 10px
+    & .mat-form-field
+      width: 100%
+
+  & .col-auto
+    width: auto
+    & .mat-flat-button
+      height: 100%
+
+::ng-deep .mat-form-field-wrapper
+  margin-bottom: -1.25em
+:host ::ng-deep .message-field .mat-form-field-wrapper
+  margin: 0 !important
+  padding: 0

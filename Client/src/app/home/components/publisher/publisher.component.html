@@ -1,0 +1,18 @@
+<div class="publisher-wrap">
+
+  <mat-card>
+    <mat-card-content>
+      <form class="row" [formGroup]="publisherForm" (ngSubmit)="onPublish()">
+        <div class="col">
+          <mat-form-field class="message-field" appearance="outline">
+            <input formControlName="message" required matInput placeholder="Message">
+          </mat-form-field>
+        </div>
+        <div class="col-auto">
+          <button type="submit" mat-flat-button color="primary">Publish</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+
+</div>
